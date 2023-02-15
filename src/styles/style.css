@@ -1,0 +1,10 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  /* font-family: 'Work Sans', sans-serif; */
+}
+
+.main_container {
+  max-width: 1240px !important;
+  padding: 0 20px !important;
+  margin: 0 auto !important;
+}
