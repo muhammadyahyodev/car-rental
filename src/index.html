@@ -26,51 +26,101 @@
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="/dist/output.css" />
 
-    <title>Car rental</title>
+    <title>Car-rental</title>
   </head>
   <body>
-    <header class="bg-[#FFFFFF] border-b">
+    <!-- start header -->
+    <header class="bg-[#FFFFFF] border-b sticky top-0 left-0 z-100">
       <div class="container main_container mx-auto">
         <nav class="nav h-24 flex justify-between">
           <!-- left -->
-          <div class="nav_logo flex w-[45%] h-auto font-medium justify-between">
-            <ul class="flex items-center text-center justify-between w-full">
+          <div class="nav_logo flex w-[48%] h-auto font-medium justify-between">
+            <div
+              class="flex items-center justify-center w-[50%] cursor-pointer"
+            >
+              <img src="./images/icons/Logo.svg" alt="icon" />
+            </div>
+            <ul
+              class="items-center text-center hidden lg:flex justify-between w-full"
+            >
               <li>
-                <img src="./images/icons/Logo.svg" alt="icon" />
+                <div
+                  class="flex items-center cursor-pointer justify-center text-center rounded-full hover:bg-slate-100 h-14 w-[124px] duration-300"
+                >
+                  Categories
+                </div>
               </li>
-              <li><a href="">Categories</a></li>
-              <li>
-                <select class="bg-transparent" name="" id="">
-                  <option value="" selected>About us</option>
-                  <option value="">News</option>
-                  <option value="">Careers</option>
-                  <option value="">Locations</option>
-                </select>
+              <li class="list relative">
+                <div
+                  class="flex items-center justify-center cursor-pointer text-center rounded-full hover:bg-slate-100 h-14 w-[124px] duration-300"
+                >
+                  About us
+                  <span class="ml-2"
+                    ><img src="./images/icons/down.svg" alt="icon"
+                  /></span>
+                </div>
+                <ul
+                  class="absolute top-[60px] left-[-5px] p-5 bg-white shadow-sm border w-36 h-auto flex-wrap items-center justify-center rounded-3xl opacity-0"
+                >
+                  <li
+                    class="h-10 flex items-center hover:text-[#299764] cursor-pointer"
+                  >
+                    News
+                  </li>
+                  <li
+                    class="h-10 flex items-center hover:text-[#299764] cursor-pointer"
+                  >
+                    Carees
+                  </li>
+                  <li
+                    class="h-10 flex items-center hover:text-[#299764] cursor-pointer"
+                  >
+                    Locations
+                  </li>
+                </ul>
               </li>
-              <li>
-                <select name="" class="bg-transparent" id="">
-                  <option value="" selected>Help center</option>
-                  <option value="">FAQ</option>
-                  <option value="">Contact us</option>
-                  <option value="">Terms</option>
-                </select>
+              <li class="list relative">
+                <div
+                  class="flex items-center justify-center cursor-pointer text-center rounded-full hover:bg-slate-100 h-14 w-36 duration-300"
+                >
+                  Help center
+                  <span class="ml-2"
+                    ><img src="./images/icons/down.svg" alt="icon"
+                  /></span>
+                </div>
+                <ul
+                  class="absolute top-[60px] left-[-5px] p-5 bg-white shadow-sm border w-36 h-auto flex-wrap items-center justify-center rounded-3xl opacity-0"
+                >
+                  <li
+                    class="h-10 flex items-center hover:text-[#299764] cursor-pointer"
+                  >
+                    FAQ
+                  </li>
+                  <li
+                    class="h-10 flex items-center hover:text-[#299764] cursor-pointer"
+                  >
+                    Contact us
+                  </li>
+                </ul>
               </li>
             </ul>
           </div>
           <!-- right -->
-          <div class="flex w-[32%] h-auto">
+          <div class="w-[32%] hidden lg:flex">
             <ul class="flex justify-between items-center w-full">
-              <li class="font-bold"><a href="">+1 855 420 0000</a></li>
+              <li class="font-bold hover:text-[]">
+                <a href="">+1 855 420 0000</a>
+              </li>
               <li>
                 <div
-                  class="h-14 w-14 rounded-full flex items-center justify-center bg-[#F5F5F5]"
+                  class="h-14 w-14 rounded-full flex items-center cursor-pointer hover:bg-slate-200 justify-center bg-[#F5F5F5] duration-300"
                 >
                   <img src="./images/icons/moon.svg" alt="icon" />
                 </div>
               </li>
               <li>
                 <div
-                  class="flex w-36 h-14 text-white bg-[#299764] items-center justify-center rounded-full"
+                  class="flex w-36 h-14 text-white bg-[#299764] cursor-pointer hover:bg-[#0d7344] items-center justify-center rounded-full duration-300"
                 >
                   Login
                   <span
@@ -80,10 +130,130 @@
               </li>
             </ul>
           </div>
+          <!-- menu icon -->
+          <div
+            class="sitebar_icon flex justify-center items-center hover:text-[#0d7344] cursor-pointer lg:hidden duration-200"
+          >
+            <i
+              class="bx bx-menu text-[50px] w-16 flex items-center justify-center"
+            ></i>
+          </div>
         </nav>
       </div>
+      <!-- sitebar  -->
+      <div
+        class="sitebar-menu w-screen h-screen text-center text-[#202122] fixed bg-[#00000083] max-sm: top-0 left-0 z-50 duration-200"
+      >
+        <!-- sitebar menu -->
+        <div
+          class="sitebar-menu-item z-30 h-full top-0 right-[-100%] w-[50%] bg-white absolute px-8 duration-200"
+        >
+          <div class="h-full">
+            <!-- icon section -->
+            <div
+              class="flex h-[10%] justify-between cursor-pointer items-center"
+            >
+              <div>
+                <img src="./images/icons/Logo.svg" alt="logo_icon" />
+              </div>
+              <div
+                class="sitebar_exit flex items-center justify-center bg-[#F5F5F5] cursor-pointer p-5 hover:bg-[#d7d6d6] rounded-full"
+              >
+                <img src="./images/icons/Union.svg" alt="icon" />
+              </div>
+            </div>
+            <!-- menu section -->
+            <div class="flex justify-start mt-10 text-left">
+              <ul class="flex-wrap">
+                <li class="font-bold py-3 text-[28px] cursor-pointer">
+                  Categories
+                </li>
+                <li>
+                  <p
+                    class="font-bold py-3 text-[28px] text-[#000000] cursor-pointer"
+                  >
+                    About us
+                  </p>
+                  <ul>
+                    <li
+                      class="text-[20px] hover:text-[#0d7344] text-[#555555] cursor-pointer"
+                    >
+                      News
+                    </li>
+                    <li
+                      class="text-[20px] hover:text-[#0d7344] text-[#555555] cursor-pointer"
+                    >
+                      Carees
+                    </li>
+                    <li
+                      class="text-[20px] hover:text-[#0d7344] text-[#555555] cursor-pointer"
+                    >
+                      Locations
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <p class="font-bold py-3 text-[28px] cursor-pointer">
+                    Help center
+                  </p>
+                  <ul>
+                    <li
+                      class="text-[20px] hover:text-[#0d7344] text-[#555555] cursor-pointer"
+                    >
+                      FAQ
+                    </li>
+                    <li
+                      class="text-[20px] hover:text-[#0d7344] text-[#555555] cursor-pointer"
+                    >
+                      Contact us
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     </header>
+    <!-- start main -->
+    <main>
+      <!-- start intro section -->
+      <section class="pt-5">
+        <div class="container main_container mx-auto">
+          <div class="intro">
+            <div>
+              <img src="./images/intro.jpg" class="rounded-2xl" alt="image" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- search input section -->
+      <section class="m-[-32px]">
+        <div class="container main_container mx-auto">
+          <div
+            class="flex h-16 items-center font-medium text-[#555555] justify-center"
+          >
+            <div
+              class="flex shadow-lg rounded-full items-center justify-between bg-[#FFFFFF] p-1 text-center h-16 w-[600px]"
+            >
+              <label for="">
+                <input
+                  type="text"
+                  placeholder="    Find the car of your  dreams"
+                  class="w-64"
+                />
+              </label>
+              <div class="flex rounded-full bg-[#299764] px-5 py-5">
+                <img src="./images/icons/search.svg" alt="search-icon" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Choose the car of your dreams -->
+    </main>
   </body>
   <!-- script js file -->
   <script src="./scripts/script.js"></script>
+  <script src="./app.js"></script>
 </html>

@@ -8,3 +8,18 @@ body {
   padding: 0 20px !important;
   margin: 0 auto !important;
 }
+
+.list:hover > ul {
+  opacity: 1;
+  visibility: visible;
+}
+
+.sitebar-menu {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.sitebar-menu.clicked {
+  opacity: 1;
+  visibility: visible;
+}
