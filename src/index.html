@@ -16,6 +16,12 @@
       rel="stylesheet"
     />
 
+    <!-- swiper js -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+
     <!-- splide css -->
     <link
       rel="stylesheet"
@@ -54,14 +60,14 @@
             >
               <li>
                 <div
-                  class="flex items-center cursor-pointer justify-center text-center rounded-full hover:bg-slate-100 h-14 w-[124px] duration-300"
+                  class="flex items-center cursor-pointer justify-center text-center rounded-full hover:bg-[#F5F5F5] active:bg-[#F5F5F5] h-14 w-[124px] duration-300"
                 >
                   Categories
                 </div>
               </li>
               <li class="list relative">
                 <div
-                  class="flex items-center justify-center cursor-pointer text-center rounded-full hover:bg-slate-100 h-14 w-[124px] duration-300"
+                  class="flex items-center justify-center cursor-pointer text-center rounded-full hover:bg-[#F5F5F5] active:bg-[#F5F5F5] h-14 w-[124px] duration-300"
                 >
                   About us
                   <span class="ml-2"
@@ -69,7 +75,7 @@
                   /></span>
                 </div>
                 <ul
-                  class="absolute top-[60px] left-[-5px] p-5 bg-white shadow-sm border w-36 h-auto flex-wrap items-center justify-center rounded-3xl opacity-0"
+                  class="absolute top-[60px] left-[-5px] p-5 bg-white shadow-sm border w-36 h-auto flex-wrap items-center justify-center rounded-3xl opacity-0 z-20"
                 >
                   <li
                     class="h-10 flex items-center hover:text-[#299764] cursor-pointer"
@@ -90,7 +96,7 @@
               </li>
               <li class="list relative">
                 <div
-                  class="flex items-center justify-center cursor-pointer text-center rounded-full hover:bg-slate-100 h-14 w-36 duration-300"
+                  class="flex items-center justify-center cursor-pointer text-center rounded-full hover:bg-[#F5F5F5] active:bg-[#F5F5F5] h-14 w-36 duration-300"
                 >
                   Help center
                   <span class="ml-2"
@@ -98,7 +104,7 @@
                   /></span>
                 </div>
                 <ul
-                  class="absolute top-[60px] left-[-5px] p-5 bg-white shadow-sm border w-36 h-auto flex-wrap items-center justify-center rounded-3xl opacity-0"
+                  class="absolute top-[60px] left-[-5px] p-5 bg-white shadow-sm border w-36 h-auto flex-wrap items-center justify-center rounded-3xl opacity-0 z-20"
                 >
                   <li
                     class="h-10 flex items-center hover:text-[#299764] cursor-pointer"
@@ -122,14 +128,14 @@
               </li>
               <li>
                 <div
-                  class="h-14 w-14 rounded-full flex items-center cursor-pointer hover:bg-slate-200 justify-center bg-[#F5F5F5] duration-300"
+                  class="dark-mood h-14 w-14 rounded-full flex items-center cursor-pointer bg-[#F5F5F5] hover:bg-[#F5F5F5] active:bg-[#299764] justify-center duration-300"
                 >
                   <img src="./images/icons/moon.svg" alt="icon" />
                 </div>
               </li>
               <li>
                 <div
-                  class="login_btn flex w-36 h-14 text-white bg-[#299764] cursor-pointer hover:bg-[#0d7344] items-center justify-center rounded-full duration-300"
+                  class="login_btn flex w-36 h-14 text-white bg-[#299764] cursor-pointer hover:bg-[#077743] active:bg-[#F5F5F5] active:text-[#000000] items-center justify-center rounded-full duration-300"
                 >
                   Login
                   <span
@@ -226,7 +232,7 @@
 
       <!-- regitration -->
       <div
-        class="login_panel absolute top-[200px] left-[650px] w-[600px] h-[490px] bg-[#FFFFFF] rounded-3xl text-center px-10 hidden"
+        class="login_panel absolute top-[200px] left-[650px] w-[600px] h-[490px] bg-[#FFFFFF] rounded-3xl text-center px-10 hidden z-30"
       >
         <h1 class="text-[36px] font-bold mt-12">Login</h1>
         <p class="text-[16px] mt-2">
@@ -234,44 +240,48 @@
         </p>
 
         <div
-          class="registration_exit flex items-center justify-center bg-[#F5F5F5] absolute right-10 top-10 cursor-pointer p-5 hover:bg-[#d7d6d6] rounded-full"
+          class="registration_exit flex items-center justify-center bg-[#FFFFFF] absolute right-10 top-10 cursor-pointer p-5 hover:bg-[#F5F5F5] active:bg-[#299764] rounded-full"
         >
           <img src="./images/icons/Union.svg" alt="icon" />
         </div>
 
-        <form action="">
-          <label for="">
+        <form action="" id="submitForm">
+          <label for="email">
             <input
+              id="email"
               type="text"
-              placeholder="       Email"
-              class="bg-white w-full h-14 mt-8 border rounded-full"
+              placeholder="Email"
+              class="bg-white px-5 w-full h-14 mt-8 focus:outline-none focus:ring-2 focus:ring-blue-500 border rounded-full"
             />
           </label>
 
-          <label for="">
+          <label for="password">
             <input
-              type="text"
-              placeholder="       Password"
-              class="bg-white w-full mt-4 h-14 border rounded-full"
+              id="password"
+              type="password"
+              placeholder="Password"
+              class="bg-white px-5 w-full mt-4 h-14 border rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
           </label>
 
-          <p class="flex justify-end mt-2 text-[14px] text-[#555555]">
+          <p
+            class="flex justify-end mt-2 text-[14px] cursor-pointer hover:text-[#252525] text-[#555555]"
+          >
             Forgot password
           </p>
 
           <p
-            class="flex justify-center items-center mt-5 text-black font-medium"
+            class="flex justify-center items-center mt-5 text-[] font-medium text-[#555555] hover:text-[#252525] cursor-pointer"
           >
             I want to create an account
           </p>
 
           <div
-            class="flex items-center justify-center cursor-pointer hover:bg-[#0d7344] text-center bg-[#299764] text-white mt-6 rounded-full h-14"
+            class="flex items-center justify-center bg-[#299764] cursor-pointer hover:bg-[#077743] active:bg-[#F5F5F5] text-center active:text-[#000] text-white mt-6 rounded-full h-14"
           >
             <button class="flex items-center justify-center">
               Login
-              <span class="flex items-center justify-center ml-2"
+              <span class="flex items-center justify-center ml-2 bg-transparent"
                 ><img src="./images/icons/exit.svg" alt="icon"
               /></span>
             </button>
@@ -284,40 +294,117 @@
       <!-- start intro section -->
       <section class="pt-5">
         <div class="container main_container mx-auto">
-          <div class="intro">
-            <div>
-              <img src="./images/intro.jpg" class="rounded-2xl" alt="image" />
+          <!-- Swiper -->
+          <div class="swiper intro_swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="relative">
+                  <div
+                    class="flex items-center justify-center w-full text-center absolute text-white top-10 z-10"
+                  >
+                    <div class="w-[40%]">
+                      <h1 class="text-[36px]">Compact cars</h1>
+                      <p class="text-[16px]">
+                        Rent cars as you are comfortable and where you are
+                        comfortable.
+                      </p>
+                    </div>
+                  </div>
+                  <img
+                    src="./images/intro.jpg"
+                    class="rounded-2xl"
+                    alt="image"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="relative">
+                  <div
+                    class="flex items-center justify-center w-full text-center absolute text-white top-10 z-10"
+                  >
+                    <div class="w-[40%]">
+                      <h1 class="text-[36px]">Sports cars</h1>
+                      <p class="text-[16px]">
+                        Rent cars as you are comfortable and where you are
+                        comfortable.
+                      </p>
+                    </div>
+                  </div>
+                  <img
+                    src="./images/Rectangle 672.png"
+                    class="absolute"
+                    alt="icon"
+                  />
+                  <img
+                    src="./images/intro3.jpg"
+                    class="rounded-2xl"
+                    alt="image"
+                  />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="relative">
+                  <div
+                    class="flex items-center justify-center w-full text-center absolute text-white top-10 z-10"
+                  >
+                    <div class="w-[40%]">
+                      <h1 class="text-[36px]">Vans</h1>
+                      <p class="text-[16px]">
+                        Rent cars as you are comfortable and where you are
+                        comfortable.
+                      </p>
+                    </div>
+                  </div>
+                  <img
+                    src="./images/Rectangle 672.png"
+                    class="absolute"
+                    alt="icon"
+                  />
+                  <img
+                    src="./images/intro2.jpg"
+                    class="rounded-2xl"
+                    alt="image"
+                  />
+                </div>
+              </div>
             </div>
+            <div class="swiper-pagination"></div>
           </div>
         </div>
       </section>
+
       <!-- search input section -->
       <section class="m-[-32px]">
         <div class="container main_container mx-auto">
           <div
-            class="flex h-16 items-center font-medium text-[#555555] justify-center"
+            class="flex h-16 items-center font-medium text-[#555555] justify-center relative z-20"
           >
-            <div
-              class="flex shadow-lg rounded-full items-center justify-between bg-[#FFFFFF] p-1 text-center sm:h-14 lg:h-16 sm:w-[550px] lg:w-[600px]"
+            <button
+              class="flex shadow-lg px-5 rounded-full border-none justify-between focus:outline-none bg-[#FFFFFF] p-1 text-center sm:h-14 lg:h-16 sm:w-[550px] lg:w-[600px] focus:ring-2 focus:ring-green-500 relative"
             >
-              <label for="">
+              <label for="" class="w-full h-full flex items-center">
                 <input
                   type="text"
-                  placeholder="    Find the car of your  dreams"
-                  class="w-64"
+                  placeholder="Find the car of your dreams"
+                  class="w-full"
                 />
               </label>
               <div
-                class="flex rounded-full hover:bg-[#0d7344] bg-[#299764] sm:px-3 sm:py-3 lg:px-5 lg:py-5"
+                class="flex rounded-full hover:bg-[#0d7344] bg-[#299764] active:bg-[#004c29] sm:px-3 sm:py-3 lg:px-5 lg:py-5 absolute items-center justify-center right-1"
               >
                 <img src="./images/icons/search.svg" alt="search-icon" />
+              </div>
+            </button>
+            <div class="absolute">
+              <div class="bg-black absolute bottom-0 h-10">
+                <img src="./images/icons/left.svg" alt="icon" />
               </div>
             </div>
           </div>
         </div>
       </section>
       <!-- Choose the car of your dreams -->
-      <section class="mt-28">
+      <section class="mt-28 pb-8">
         <div class="container main_container mx-auto">
           <div class="flex items-center justify-center">
             <div class="text-center w-[570px] items-center">
@@ -337,29 +424,31 @@
             <div
               class="text-white flex justify-around h-14 w-[50%] items-center"
             >
-              <div
-                class="flex items-center justify-center rounded-full bg-[#299764] h-full w-[155px]"
+              <button
+                class="flex items-center justify-center rounded-full bg-[#299764] text-[#FFFFFF] active:bg-[#299764] active:text-white h-full w-[155px]"
               >
                 Compact
-              </div>
-              <div
-                class="flex items-center justify-center rounded-full bg-[#E5E7EA] text-[#000000] h-full w-[170px]"
+              </button>
+              <button
+                class="flex items-center justify-center rounded-full bg-[#FFFFFF] border-2 hover:bg-[#F5F5F5] active:bg-[#299764] active:text-white text-[#000000] h-full w-[170px]"
               >
                 Sports car
-              </div>
-              <div
-                class="flex items-center justify-center rounded-full bg-[#E5E7EA] text-[#000000] h-full w-[130px]"
+              </button>
+              <button
+                class="flex items-center justify-center rounded-full bg-[#FFFFFF] border-2 hover:bg-[#F5F5F5] active:bg-[#299764] active:text-white text-[#000000] h-full w-[130px]"
               >
                 Vans
-              </div>
+              </button>
             </div>
           </div>
           <!-- cards -->
           <div class="mt-10 grid grid-cols-3">
-            <div class="w-[390px] h-[435px] bg-[#F5F5F5] rounded-3xl p-5 my-2">
+            <div
+              class="cards w-[390px] h-[435px] bg-[#F5F5F5] hover:bg-[#299764] hover:text-[#FFFFFF] rounded-3xl p-5 my-2 duration-200"
+            >
               <div class="">
                 <h1 class="font-bold text-[24px]">Ford Fiesta</h1>
-                <p class="text-[#555555]">Economy car</p>
+                <p class="">Economy car</p>
               </div>
               <div class="mt-5">
                 <img src="./images/car1.png" alt="image" />
@@ -386,11 +475,178 @@
                 </p>
               </div>
             </div>
+
+            <div
+              class="cards w-[390px] h-[435px] bg-[#F5F5F5] hover:bg-[#299764] hover:text-[#FFFFFF] rounded-3xl p-5 my-2 duration-200"
+            >
+              <div class="">
+                <h1 class="font-bold text-[24px]">Nissan Versa</h1>
+                <p class="">Compact car</p>
+              </div>
+              <div class="mt-5">
+                <img src="./images/car2.png" alt="image" />
+              </div>
+              <div class="grid grid-cols-2 justify-center items-center mt-5">
+                <p class="mt-5 flex">
+                  <img src="./images/icons/person.svg" alt="icon" />
+                  <span class="ml-4"> 5 Seats</span>
+                </p>
+
+                <p class="mt-5 flex">
+                  <img src="./images/icons/car_element.svg" alt="icon" />
+                  <span class="ml-4">Automatic</span>
+                </p>
+
+                <p class="mt-5 flex">
+                  <img src="./images/icons/document.svg" alt="icon" />
+                  <span class="ml-4"> 21+ Years</span>
+                </p>
+
+                <p class="mt-5 flex">
+                  <img src="./images/icons/drop.svg" alt="icon" />
+                  <span class="ml-4"> 1-lit / 2.5 km</span>
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="cards w-[390px] h-[435px] bg-[#F5F5F5] hover:bg-[#299764] hover:text-[#FFFFFF] rounded-3xl p-5 my-2 duration-200"
+            >
+              <div class="">
+                <h1 class="font-bold text-[24px]">Toyoto Carolla</h1>
+                <p class="">Mid-size Car</p>
+              </div>
+              <div class="mt-5">
+                <img src="./images/car3.png" alt="image" />
+              </div>
+              <div class="grid grid-cols-2 justify-center items-center mt-5">
+                <p class="mt-5 flex">
+                  <img src="./images/icons/person.svg" alt="icon" />
+                  <span class="ml-4"> 5 Seats</span>
+                </p>
+
+                <p class="mt-5 flex">
+                  <img src="./images/icons/car_element.svg" alt="icon" />
+                  <span class="ml-4">Automatic</span>
+                </p>
+
+                <p class="mt-5 flex">
+                  <img src="./images/icons/document.svg" alt="icon" />
+                  <span class="ml-4"> 21+ Years</span>
+                </p>
+
+                <p class="mt-5 flex">
+                  <img src="./images/icons/drop.svg" alt="icon" />
+                  <span class="ml-4"> 1-lit / 2.5 km</span>
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="cards w-[390px] h-[435px] bg-[#F5F5F5] hover:bg-[#299764] hover:text-[#FFFFFF] rounded-3xl p-5 my-2 duration-200"
+            >
+              <div class="">
+                <h1 class="font-bold text-[24px]">Nissan Roogue</h1>
+                <p class="">Mid-size SUV</p>
+              </div>
+              <div class="mt-5">
+                <img src="./images/car4.png" alt="image" />
+              </div>
+              <div class="grid grid-cols-2 justify-center items-center mt-5">
+                <p class="mt-5 flex">
+                  <img src="./images/icons/person.svg" alt="icon" />
+                  <span class="ml-4"> 5 Seats</span>
+                </p>
+
+                <p class="mt-5 flex">
+                  <img src="./images/icons/car_element.svg" alt="icon" />
+                  <span class="ml-4">Automatic</span>
+                </p>
+
+                <p class="mt-5 flex">
+                  <img src="./images/icons/document.svg" alt="icon" />
+                  <span class="ml-4"> 21+ Years</span>
+                </p>
+
+                <p class="mt-5 flex">
+                  <img src="./images/icons/drop.svg" alt="icon" />
+                  <span class="ml-4"> 1-lit / 2.5 km</span>
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="cards w-[390px] h-[435px] bg-[#F5F5F5] hover:bg-[#299764] hover:text-[#FFFFFF] rounded-3xl p-5 my-2 duration-200"
+            >
+              <div class="">
+                <h1 class="font-bold text-[24px]">Chevy Traverse</h1>
+                <p class="">Full-size SUV</p>
+              </div>
+              <div class="mt-5">
+                <img src="./images/car5.png" alt="image" />
+              </div>
+              <div class="grid grid-cols-2 justify-center items-center mt-5">
+                <p class="mt-5 flex">
+                  <img src="./images/icons/person.svg" alt="icon" />
+                  <span class="ml-4"> 5 Seats</span>
+                </p>
+
+                <p class="mt-5 flex">
+                  <img src="./images/icons/car_element.svg" alt="icon" />
+                  <span class="ml-4">Automatic</span>
+                </p>
+
+                <p class="mt-5 flex">
+                  <img src="./images/icons/document.svg" alt="icon" />
+                  <span class="ml-4"> 21+ Years</span>
+                </p>
+
+                <p class="mt-5 flex">
+                  <img src="./images/icons/drop.svg" alt="icon" />
+                  <span class="ml-4"> 1-lit / 2.5 km</span>
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="cards w-[390px] h-[435px] bg-[#F5F5F5] hover:bg-[#299764] hover:text-[#FFFFFF] rounded-3xl p-5 my-2 duration-200"
+            >
+              <div class="">
+                <h1 class="font-bold text-[24px]">Nissan Altima</h1>
+                <p class="">Full-size Car</p>
+              </div>
+              <div class="mt-5">
+                <img src="./images/car6.png" alt="image" />
+              </div>
+              <div class="grid grid-cols-2 justify-center items-center mt-5">
+                <p class="mt-5 flex">
+                  <img src="./images/icons/person.svg" alt="icon" />
+                  <span class="ml-4"> 5 Seats</span>
+                </p>
+
+                <p class="mt-5 flex">
+                  <img src="./images/icons/car_element.svg" alt="icon" />
+                  <span class="ml-4">Automatic</span>
+                </p>
+
+                <p class="mt-5 flex">
+                  <img src="./images/icons/document.svg" alt="icon" />
+                  <span class="ml-4"> 21+ Years</span>
+                </p>
+
+                <p class="mt-5 flex">
+                  <img src="./images/icons/drop.svg" alt="icon" />
+                  <span class="ml-4"> 1-lit / 2.5 km</span>
+                </p>
+              </div>
+            </div>
+
             <!-- ====================================== -->
           </div>
+          <!-- =================================== -->
           <div class="flex items-center justify-center text-center mt-5">
             <div
-              class="w-[173px] h-[60px] bg-[#299764] hover:bg-[#0d7344] text-white rounded-full flex items-center justify-center"
+              class="w-[173px] h-[60px] bg-[#299764] cursor-pointer active:bg-[#08673a] text-white rounded-full flex items-center justify-center"
             >
               View all cars
             </div>
@@ -398,7 +654,275 @@
         </div>
       </section>
       <!-- Hear what the community is saying -->
-      <section></section>
+      <section class="bg-[#F5F5F5] py-24">
+        <div class="container main_container mx-auto">
+          <div
+            class="swiper_section flex rounded-3xl overflow-hidden bg-[#FFFFFF]"
+          >
+            <!-- right -->
+            <div class="p-16 w-[40%]">
+              <div class="flex">
+                <img src="./images/icons/google_icon.svg" alt="google-icon" />
+                <span class="text-[#4285F4] text-[16px] ml-2">
+                  <a href="https://google.com" target="_blank"
+                    >From Google</a
+                  ></span
+                >
+              </div>
+              <!-- ============== -->
+              <div
+                class="mt-5 text-[34px] font-bold text-[#000] border-b-2 pb-8 border-red-200"
+              >
+                <h1>Hear what the community is saying</h1>
+              </div>
+              <!-- ============== -->
+              <div class="mt-5">
+                <p class="text-[14px]">More interesting reviews on Instagram</p>
+              </div>
+              <!-- =============== -->
+              <div class="mt-5 relative">
+                <div
+                  class="ins-div border rounded-full w-auto inline-block p-[2px]"
+                >
+                  <button
+                    class="instagram-icon py-3 px-10 rounded-full bg-[#FFFFFF] hover:text-white"
+                  >
+                    <p href="" class="ins-text font-bold">Instagram</p>
+                  </button>
+                </div>
+              </div>
+              <!-- ================ -->
+            </div>
+            <!-- left -->
+            <div
+              class="py-20 pl-20 bg-[#299764] w-[60%] flex items-center justify-center overflow-hidden"
+            >
+              <!-- Swiper -->
+              <div class="swiper-container">
+                <div class="swiper-wrapper cursor-text">
+                  <div class="swiper-slide">
+                    <div class="bg-[#FFFFFF] rounded-3xl p-5 overflow-hidden">
+                      <div class="flex justify-between">
+                        <div class="">
+                          <img src="./images/status.png" alt="image" />
+                        </div>
+                        <div class="w-3/4">
+                          <div>
+                            <div class="text-star">
+                              <h1 class="font-bold text-lg">Savannah Nyugen</h1>
+                              <p class="text-[#555555] text-base">
+                                savannahnguyen@gmail.com
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="w-[12%] flex items-center justify-center">
+                          <img
+                            src="./images/icons/google_icon.svg"
+                            class="p-2 h-full w-full"
+                            alt="icon"
+                          />
+                        </div>
+                      </div>
+                      <div class="mt-2 border-b-2 pb-5">
+                        <p class="text-base">
+                          Sagittis sed tortor, elementum vitae varius sodales
+                          consectetur. Vitae arcu ut morbi bibendum ullamcorper
+                          feugiat. Venenatis hendrerit cursus egestas sit ornare
+                          nunc vulputate aliquam sapien. Pulvinar nunc
+                          consectetur nibh consectetur mollis mauris est mauris
+                          amet. Sed hac vehicula id et dui morbi quam pulvinar
+                          condimentum. Senectus sed varius interdum nunc, arcu
+                          vulputate massa.
+                        </p>
+                      </div>
+                      <div>
+                        <div class="flex mt-5">
+                          <h1>Start rating:</h1>
+                          <span class="ml-3 flex items-center justify-center"
+                            ><img
+                              src="./images/icons/star.svg"
+                              class="flex"
+                              alt="icon"
+                          /></span>
+                          <span class="ml-3 flex items-center justify-center"
+                            ><img
+                              src="./images/icons/star.svg"
+                              class="flex"
+                              alt="icon"
+                          /></span>
+                          <span class="ml-3 flex items-center justify-center"
+                            ><img
+                              src="./images/icons/star.svg"
+                              class="flex"
+                              alt="icon"
+                          /></span>
+                          <span class="ml-3 flex items-center justify-center"
+                            ><img
+                              src="./images/icons/star.svg"
+                              class="flex"
+                              alt="icon"
+                          /></span>
+                          <span class="ml-3 flex items-center justify-center"
+                            ><img
+                              src="./images/icons/star.svg"
+                              class="flex"
+                              alt="icon"
+                          /></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="bg-[#FFFFFF] rounded-3xl p-5 overflow-hidden">
+                      <div class="flex justify-between">
+                        <div class="">
+                          <img src="./images/status.png" alt="image" />
+                        </div>
+                        <div class="w-3/4">
+                          <div>
+                            <div class="text-star">
+                              <h1 class="font-bold text-lg">Savannah Nyugen</h1>
+                              <p class="text-[#555555] text-base">
+                                savannahnguyen@gmail.com
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="w-[12%] flex items-center justify-center">
+                          <img
+                            src="./images/icons/google_icon.svg"
+                            class="p-2 h-full w-full"
+                            alt="icon"
+                          />
+                        </div>
+                      </div>
+                      <div class="mt-2 border-b-2 pb-5">
+                        <p class="text-base">
+                          Sagittis sed tortor, elementum vitae varius sodales
+                          consectetur. Vitae arcu ut morbi bibendum ullamcorper
+                          feugiat. Venenatis hendrerit cursus egestas sit ornare
+                          nunc vulputate aliquam sapien. Pulvinar nunc
+                          consectetur nibh consectetur mollis mauris est mauris
+                          amet. Sed hac vehicula id et dui morbi quam pulvinar
+                          condimentum. Senectus sed varius interdum nunc, arcu
+                          vulputate massa.
+                        </p>
+                      </div>
+                      <div>
+                        <div class="flex mt-5">
+                          <h1>Start rating:</h1>
+                          <span class="ml-3 flex items-center justify-center"
+                            ><img
+                              src="./images/icons/star.svg"
+                              class="flex"
+                              alt="icon"
+                          /></span>
+                          <span class="ml-3 flex items-center justify-center"
+                            ><img
+                              src="./images/icons/star.svg"
+                              class="flex"
+                              alt="icon"
+                          /></span>
+                          <span class="ml-3 flex items-center justify-center"
+                            ><img
+                              src="./images/icons/star.svg"
+                              class="flex"
+                              alt="icon"
+                          /></span>
+                          <span class="ml-3 flex items-center justify-center"
+                            ><img
+                              src="./images/icons/star.svg"
+                              class="flex"
+                              alt="icon"
+                          /></span>
+                          <span class="ml-3 flex items-center justify-center"
+                            ><img
+                              src="./images/icons/star.svg"
+                              class="flex"
+                              alt="icon"
+                          /></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="bg-[#FFFFFF] rounded-3xl p-5 overflow-hidden">
+                      <div class="flex justify-between">
+                        <div class="">
+                          <img src="./images/status.png" alt="image" />
+                        </div>
+                        <div class="w-3/5">
+                          <div>
+                            <div class="text-start">
+                              <h1 class="font-bold text-lg">Ronald Richards</h1>
+                              <p class="text-[#555555] text-base">
+                                ronaldrichards@gmail.com
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="w-[12%] flex items-center justify-center">
+                          <img
+                            src="./images/icons/google_icon.svg"
+                            class="p-2 h-full w-full"
+                            alt="icon"
+                          />
+                        </div>
+                      </div>
+                      <div class="mt-2 border-b-2 pb-5">
+                        <p class="text-base">
+                          Placerat pulvinar in amet sem id gravida nisi leo. A
+                          dignissim est pellentesque mi quisque vel mi ut.
+                          Porttitor blandit auctor odio a ornare felis tortor
+                          bibendum molestie.
+                        </p>
+                      </div>
+                      <div>
+                        <div class="flex mt-5">
+                          <h1>Start rating:</h1>
+                          <span class="ml-3 flex items-center justify-center"
+                            ><img
+                              src="./images/icons/star.svg"
+                              class="flex"
+                              alt="icon"
+                          /></span>
+                          <span class="ml-3 flex items-center justify-center"
+                            ><img
+                              src="./images/icons/star.svg"
+                              class="flex"
+                              alt="icon"
+                          /></span>
+                          <span class="ml-3 flex items-center justify-center"
+                            ><img
+                              src="./images/icons/star.svg"
+                              class="flex star"
+                              alt="icon"
+                          /></span>
+                          <span class="ml-3 flex items-center justify-center"
+                            ><img
+                              src="./images/icons/star.svg"
+                              class="flex"
+                              alt="icon"
+                          /></span>
+                          <span class="ml-3 flex items-center justify-center"
+                            ><img
+                              src="./images/icons/star.svg"
+                              class="flex"
+                              alt="icon"
+                          /></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-pagination"></div>
+              </div>
+              <!-- ======================= -->
+            </div>
+          </div>
+        </div>
+      </section>
       <!-- More than 50 brands of cars -->
       <section class="mt-32">
         <div class="container main_container mx-auto">
@@ -429,7 +953,9 @@
           <!-- cards -->
           <div class="grid grid-cols-2 mt-10 gap-2">
             <!-- card -->
-            <div class="bg-[#F5F5F5] w-[590px] h-[216px] p-10 rounded-3xl">
+            <div
+              class="bg-[#F5F5F5] cursor-pointer hover:bg-[#299764] hover:text-[#FFFFFF] w-[590px] h-[216px] p-10 rounded-3xl duration-500"
+            >
               <div class="flex justify-between w-full">
                 <div class="w-[210px] items-center justify-center flex">
                   <h1 class="text-[32px] font-bold">Book online, pay online</h1>
@@ -445,6 +971,59 @@
               </div>
             </div>
             <!-- DYNAMIC CONTENT -->
+            <div
+              class="bg-[#F5F5F5] cursor-pointer hover:bg-[#299764] hover:text-[#FFFFFF] w-[590px] h-[216px] p-10 rounded-3xl duration-500"
+            >
+              <div class="flex justify-between w-full">
+                <div class="w-[210px] items-center justify-center flex">
+                  <h1 class="text-[32px] font-bold">Book online, pay online</h1>
+                </div>
+                <div class="flex items-center justify-center">
+                  <img src="./images/icons/device.svg" alt="icon" />
+                </div>
+              </div>
+              <div>
+                <p class="text-[16px] mt-2 text-[#555555] w-[350px]">
+                  Complete the booking process A-Z, with our easy online system
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="card bg-[#F5F5F5] cursor-pointer hover:bg-[#299764] hover:text-[#FFFFFF] w-[590px] h-[216px] p-10 rounded-3xl duration-500"
+            >
+              <div class="flex justify-between w-full">
+                <div class="w-[210px] items-center justify-center flex">
+                  <h1 class="text-[32px] font-bold">Book online, pay online</h1>
+                </div>
+                <div class="flex items-center justify-center">
+                  <img src="./images/icons/device.svg" alt="icon" />
+                </div>
+              </div>
+              <div>
+                <p class="text-[16px] mt-2 text-[#555555] w-[350px]">
+                  Complete the booking process A-Z, with our easy online system
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="bg-[#F5F5F5] cursor-pointer hover:bg-[#299764] hover:text-[#FFFFFF] w-[590px] h-[216px] p-10 rounded-3xl duration-500"
+            >
+              <div class="flex justify-between w-full">
+                <div class="w-[210px] items-center justify-center flex">
+                  <h1 class="text-[32px] font-bold">Book online, pay online</h1>
+                </div>
+                <div class="flex items-center justify-center">
+                  <img src="./images/icons/device.svg" alt="icon" />
+                </div>
+              </div>
+              <div>
+                <p class="text-[16px] mt-2 text-[#555555] w-[350px]">
+                  Complete the booking process A-Z, with our easy online system
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -471,7 +1050,7 @@
                 <!-- cards smaill -->
                 <div class="mt-20 grid grid-cols-3">
                   <div
-                    class="flex-wrap justify-between w-[200px] h-[160px] bg-[#F5F5F5] rounded-3xl py-4 px-3"
+                    class="flex-wrap justify-between w-[200px] h-[160px] bg-[#F5F5F5] cursor-pointer hover:bg-[#299764] duration-500 rounded-3xl py-4 px-3"
                   >
                     <div class="flex justify-end px-2">
                       <img src="./images/icons/chemistry.svg" alt="icon" />
@@ -486,7 +1065,7 @@
                   <!-- ================ -->
 
                   <div
-                    class="flex-wrap justify-between w-[200px] h-[160px] bg-[#F5F5F5] rounded-3xl py-4 px-3"
+                    class="flex-wrap justify-between w-[200px] h-[160px] bg-[#F5F5F5] cursor-pointer hover:bg-[#299764] duration-500 rounded-3xl py-4 px-3"
                   >
                     <div class="flex justify-end px-2">
                       <img src="./images/icons/chemistry.svg" alt="icon" />
@@ -499,7 +1078,7 @@
                   </div>
 
                   <div
-                    class="flex-wrap justify-between w-[200px] h-[160px] bg-[#F5F5F5] rounded-3xl py-4 px-3"
+                    class="flex-wrap justify-between w-[200px] h-[160px] bg-[#F5F5F5] cursor-pointer hover:bg-[#299764] duration-500 rounded-3xl py-4 px-3"
                   >
                     <div class="flex justify-end px-2">
                       <img src="./images/icons/chemistry.svg" alt="icon" />
@@ -615,28 +1194,28 @@
                 <p class="font-bold">Our locations</p>
                 <ul class="flex justify-around mt-5">
                   <li
-                    class="mr-4 w-10 h-10 flex items-center justify-center rounded-full bg-black"
+                    class="mr-4 w-10 h-10 flex items-center hover:bg-[#0B84EE] bg-black justify-center rounded-full bg-[radial-gradient(230.93% 230.93% at 102.01% 2.03%, #F9ED32 0%, #EE2A7B 36%, #D22A8A 44%, #8B2AB2 60%, #1B2AF0 83%, #002AFF 88%)]"
                   >
                     <a href="">
                       <img src="./images/icons/facebook.svg" alt="icon" />
                     </a>
                   </li>
                   <li
-                    class="mr-4 w-10 h-10 flex items-center justify-center rounded-full bg-black"
+                    class="hover:bg-[#55ACE3] mr-4 w-10 h-10 flex items-center justify-center rounded-full bg-black"
                   >
                     <a href=""
                       ><img src="./images/icons/twitter.svg" alt="icon"
                     /></a>
                   </li>
                   <li
-                    class="mr-4 w-10 h-10 flex items-center justify-center rounded-full bg-black"
+                    class="instagram-icon mr-4 w-10 h-10 flex items-center justify-center rounded-full bg-black"
                   >
                     <a href=""
                       ><img src="./images/icons/instagram.svg" alt="icon"
                     /></a>
                   </li>
                   <li
-                    class="mr-4 w-10 h-10 flex items-center justify-center rounded-full bg-black"
+                    class="hover:bg-[#48C95F] mr-4 w-10 h-10 flex items-center justify-center rounded-full bg-black"
                   >
                     <a href=""
                       ><img src="./images/icons/whatsApp.svg" alt="icon"
@@ -644,19 +1223,21 @@
                   </li>
                 </ul>
                 <div
-                  class="h-16 w-16 bg-[#299764] flex items-center justify-center rounded-full absolute right-60 bottom-40"
+                  class="h-16 w-16 bg-[#299764] hover:bg-[#0d7344] fixed flex items-center justify-center rounded-full right-10 bottom-10"
                 >
                   <img src="./images/icons/up.svg" alt="icon" />
                 </div>
               </div>
-              <!-- ================= -->
             </div>
           </div>
         </div>
       </div>
     </footer>
   </body>
+  <!-- swiper js -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <!-- utils -->
+  <script src="./scripts/utils.js"></script>
   <!-- script js file -->
-  <script src="./scripts/script.js"></script>
   <script src="./app.js"></script>
 </html>

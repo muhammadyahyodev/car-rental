@@ -4,6 +4,18 @@ body {
   /* font-family: 'Work Sans', sans-serif; */
 }
 
+/* Tungi rejim uchun stil */
+body.dark {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+/* Kunduzgi rejim uchun stil */
+body.light {
+  background-color: white;
+  color: black;
+}
+
 .main_container {
   max-width: 1240px !important;
   padding: 0 20px !important;
@@ -23,4 +35,152 @@ body {
 .sitebar-menu.clicked {
   opacity: 1;
   visibility: visible;
+}
+
+.swiper-wrapper {
+  z-index: 0 !important;
+}
+
+.swiper {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+  padding: 0;
+  z-index: 0 !important;
+}
+
+.dark-mood:hover svg > path {
+  fill: white;
+}
+
+.instagram-icon:hover {
+  background: radial-gradient(
+    230.93% 230.93% at 102.01% 2.03%,
+    #f9ed32 0%,
+    #ee2a7b 36%,
+    #d22a8a 44%,
+    #8b2ab2 60%,
+    #1b2af0 83%,
+    #002aff 88%
+  );
+}
+
+.ins-div {
+  background-clip: text;
+  background-size: 100%;
+  background-image: radial-gradient(
+    230.93% 230.93% at 102.01% 2.03%,
+    #f9ed32 0%,
+    #ee2a7b 36%,
+    #d22a8a 44%,
+    #8b2ab2 60%,
+    #1b2af0 83%,
+    #002aff 88%
+  );
+}
+
+.ins-text {
+  font-size: 14px;
+  background: radial-gradient(
+    230.93% 230.93% at 102.01% 2.03%,
+    #f9ed32 0%,
+    #ee2a7b 36%,
+    #d22a8a 44%,
+    #8b2ab2 60%,
+    #1b2af0 83%,
+    #002aff 88%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-pagination {
+  position: absolute;
+  text-align: start !important;
+  transition: 0.3s opacity;
+  transform: translate3d(0, 0, 0);
+  z-index: 10;
+}
+
+swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+  bottom: 10px;
+  left: 20px;
+  width: 100%;
+}
+
+.swiper-pagination-bullet {
+  background: #fff;
+}
+
+.swiper-pagination-bullet-active {
+  padding-left: 25px;
+  border-radius: 30px;
+}
+
+/* ================================ */
+
+.swiper-slide {
+  width: 350px;
+  height: 100%;
+  border-radius: 20px;
+  text-align: start;
+}
+
+.swiper-container {
+  width: 500px;
+  height: 100%;
+  border-radius: 20px;
+}
+
+.swiper-slide {
+  overflow: hidden;
+}
+
+.navigation {
+  background-color: #000;
+  color: #fff;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.swiper-button-prev {
+  background-image: url("previous-icon.png");
+}
+
+.swiper-button-next {
+  background-image: url("next-icon.png");
+}
+
+.star {
+  background: #000;
 }
